@@ -5,6 +5,7 @@
  * 抓包https://act.you.163.com/act/napi    
  * csrf_token在链接，cookie在请求体头部   
  * cron 30 8,13,19 * * *
+ * 是否打开通知 export yxNotify=1; // 0为关闭通知，1为打开通知
  */
 const $ = new Env("严选心愿树");
 const YX_API_HOST = "https://act.you.163.com/act/napi/wish-tree";
