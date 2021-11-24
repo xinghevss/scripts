@@ -3,7 +3,7 @@
  * 变量格式为 export xinghe_yx='{"csrf_token":"抓包csrf_token","cookie":"抓包cookie"}'
  * 抓包https://act.you.163.com/act/napi    
  * csrf_token在链接，cookie在请求体头部   
- * cron 	0 */15 * * * *
+ * cron 	0 0,15,30,45 * * * *
  */
 const $ = new Env('严选心愿城');
 const YX_API_HOST = 'https://act.you.163.com/act/napi/fairyland';
