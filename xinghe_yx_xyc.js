@@ -1,6 +1,6 @@
 /**
- * 严选心愿城
- * 变量格式为 export xinghe_yx_xyc='{"csrf_token":"抓包csrf_token","cookie":"抓包cookie"}'
+ * 严选心愿城  ql raw https://raw.githubusercontent.com/xinghevss/scripts/main/xinghe_yx_xyc.js
+ * 变量格式为 export xinghe_yx='{"csrf_token":"抓包csrf_token","cookie":"抓包cookie"}'
  * 抓包https://act.you.163.com/act/napi    
  * csrf_token在链接，cookie在请求体头部   
  * cron 	0 */15 * * * *
@@ -9,14 +9,14 @@ const $ = new Env('严选心愿城');
 const YX_API_HOST = 'https://act.you.163.com/act/napi/fairyland';
 const ua = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 yanxuan/6.7.7 app-chan-id/AppStore'
 // 此处填写cookie和csrf_token，暂时只支持青龙
-let xinghe_yx_xyc;
+let xinghe_yx;
 try {
-    xinghe_yx_xyc = JSON.parse(xinghe_yx_xyc || process.env.xinghe_yx_xyc);
+    xinghe_yx = JSON.parse(xinghe_yx || process.env.xinghe_yx);
 } catch (error) {
     console.log('cookie格式填写错误');
 }
-let cookie = xinghe_yx_xyc.cookie;
-let csrfToken = xinghe_yx_xyc.csrf_token;
+let cookie = xinghe_yx.cookie;
+let csrfToken = xinghe_yx.csrf_token;
 task();
 
 async function task() {
