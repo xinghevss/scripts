@@ -368,7 +368,7 @@ async function getShowTask(task) {
                         if (safeGet(data)) {
                             data = JSON.parse(data);
                             if (data.code === 200) {
-                                console.log("getShowTask", data);
+                                // console.log("getShowTask", data);
                             } else {
                                 console.log(`失败：${data.msg}`);
                             }
