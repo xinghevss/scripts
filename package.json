@@ -1,0 +1,25 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Self-use scripts",
+  "main": "xinghe_yx_xyc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinghevss/scripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xinghevss/scripts/issues"
+  },
+  "homepage": "https://github.com/xinghevss/scripts#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "got": "^11.8.2",
+    "iconv-lite": "^0.6.3",
+    "tough-cookie": "^4.0.0"
+  }
+}

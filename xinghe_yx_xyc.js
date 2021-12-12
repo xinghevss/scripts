@@ -10,6 +10,13 @@ const YX_API_HOST = 'https://act.you.163.com/act/napi/fairyland';
 const ua = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 yanxuan/6.7.7 app-chan-id/AppStore'
 // 此处填写cookie和csrf_token，暂时只支持青龙
 let xinghe_yx;
+
+// 本地调试使用
+if (process.argv[2] === 'debug') {
+    require('dotenv').config();
+    xinghe_yx = process.env.xinghe_yx;
+}
+
 try {
     xinghe_yx = JSON.parse(xinghe_yx || process.env.xinghe_yx);
 } catch (error) {
@@ -303,7 +310,7 @@ async function getUserBuildingInfo() {
                                 const buildingDetail = await searchBuilding(curBuilding);
                                 if (buildingDetail.buyBuilding.canUpgrade) {
                                     console.log(`开始升级建筑${curBuilding}`);
-                                    // await buildingUpgrade(curBuilding);
+                                    await buildingUpgrade(curBuilding);
                                 } else {
                                     console.log(`建筑${curBuilding}无法升级`);
                                 }
